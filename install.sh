@@ -1,7 +1,7 @@
 #!/bin/bash
 # ⚡ CC-STEROIDS INSTALLER
 # The most powerful Claude Code setup, installed in one command.
-# github.com/YOUR_HANDLE/cc-steroids
+# github.com/Swapnil565/Claude-X-
 
 set -e
 
@@ -14,6 +14,7 @@ YELLOW='\033[1;33m'
 BLUE='\033[0;34m'
 PURPLE='\033[0;35m'
 CYAN='\033[0;36m'
+GRAY='\033[0;37m'
 BOLD='\033[1m'
 RESET='\033[0m'
 
@@ -154,6 +155,9 @@ mkdir -p "$INSTALL_DIR/skills/risk-check"
 mkdir -p "$INSTALL_DIR/skills/git-discipline"
 mkdir -p "$INSTALL_DIR/skills/spawn-team"
 mkdir -p "$INSTALL_DIR/skills/context-guardian"
+mkdir -p "$INSTALL_DIR/skills/handoff"
+mkdir -p "$INSTALL_DIR/skills/snapshot"
+mkdir -p "$INSTALL_DIR/skills/project-init"
 mkdir -p "$INSTALL_DIR/hooks"
 
 ok "Directory structure created"
@@ -228,7 +232,7 @@ done
 # ═══════════════════════════════════════════
 step "Installing power skills..."
 
-for skill in manus-planner risk-check git-discipline spawn-team context-guardian; do
+for skill in manus-planner risk-check git-discipline spawn-team context-guardian handoff snapshot project-init; do
   mkdir -p "$INSTALL_DIR/skills/$skill"
   cp "$SCRIPT_DIR/.claude/skills/$skill/SKILL.md" "$INSTALL_DIR/skills/$skill/SKILL.md"
   ok "Skill: /$skill"
@@ -302,12 +306,15 @@ echo -e "     architect-planner   → System design + ADRs before implementation
 echo -e "     code-reviewer       → Pre-merge quality review"
 echo -e "     debug-team          → Competing hypotheses for hard bugs"
 echo ""
-echo -e "  ${PURPLE}🛠️  5 Power Skills:${RESET}"
+echo -e "  ${PURPLE}🛠️  8 Power Skills:${RESET}"
 echo -e "     /manus-planner      → Persistent filesystem memory for long tasks"
 echo -e "     /risk-check         → Pre-task failure mode enumeration"
 echo -e "     /git-discipline     → Conventional commits + PR templates"
 echo -e "     /spawn-team         → Agent Teams templates for parallel work"
 echo -e "     /context-guardian   → Context health management"
+echo -e "     /handoff            → Session handoff document generator"
+echo -e "     /snapshot           → State preservation before risky operations"
+echo -e "     /project-init       → Interactive project initialization wizard"
 echo ""
 echo -e "  ${YELLOW}🪝 4 Auto-Running Hooks:${RESET}"
 echo -e "     PostToolUse Write   → Auto-format with prettier"
@@ -328,7 +335,7 @@ echo -e "  ${CYAN}\"Use the codebase-explorer agent\"${RESET}   → Map any new 
 echo -e "  ${CYAN}\"Use the architect-planner agent\"${RESET}   → Design before building"
 echo -e "  ${CYAN}\"Use the debug-team agent\"${RESET}          → Competing hypotheses debug"
 echo ""
-echo -e "${BOLD}Learn more:${RESET} github.com/YOUR_HANDLE/cc-steroids"
+echo -e "${BOLD}Learn more:${RESET} github.com/Swapnil565/Claude-X-"
 echo ""
 
 if [ -d "$BACKUP_DIR" ]; then

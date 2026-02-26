@@ -8,7 +8,7 @@ Transform Claude Code from a chat assistant into an autonomous, memory-persisten
 ## ⚡ One-Command Install
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/YOUR_HANDLE/cc-steroids/main/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/Swapnil565/Claude-X-/main/install.sh | bash
 ```
 
 That's it. The installer:
@@ -16,7 +16,7 @@ That's it. The installer:
 - ✅ Installs CLAUDE.md (master configuration)
 - ✅ Enables Agent Teams + 4 auto-running hooks
 - ✅ Installs 6 specialized agents
-- ✅ Installs 5 power skills
+- ✅ Installs 8 power skills
 - ✅ Optionally installs recommended MCPs
 
 ---
@@ -41,7 +41,7 @@ That's it. The installer:
 "Use the debug-team agent for this intermittent 500 error"
 ```
 
-### 🛠️ 5 Power Skills (slash commands)
+### 🛠️ 8 Power Skills (slash commands)
 
 | Skill | What It Does |
 |-------|-------------|
@@ -50,6 +50,9 @@ That's it. The installer:
 | `/git-discipline` | Conventional commits, branch naming, PR templates. |
 | `/spawn-team` | Templates for Agent Teams — parallel workers that communicate. |
 | `/context-guardian` | Context health management. When to compact, how to recover after resets. |
+| `/handoff` | Generates a session handoff document so the next session picks up exactly where you left off. |
+| `/snapshot` | Preserves full project state before any risky operation. |
+| `/project-init` | Interactive wizard to scaffold CLAUDE.md with your real project details. |
 
 ### 🪝 4 Always-Running Hooks
 
